@@ -1,0 +1,23 @@
+{
+  "squadName": "Super Hero Squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "super man",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "flying",
+        "destroying bad strong guys",
+        "holds buildings",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+    
+  
+  ]
+}

@@ -4,7 +4,10 @@
   "description": "Testing TodoMVC using Cypress",
   "scripts": {
     "start": "./node_modules/.bin/json-server --static . data.json -m middleware.js --config json-server.json",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open --config userAgent=desktop" ,
+    "cypress:openmobile": "cypress open --config userAgent=mobile" ,
+    "cypress:runhooks":"cypress run --headed --env searchBar='#twotabsearchtextbox[type='text']' --spec 'cypress/integration/hooks/hooks.js' --config userAgent=desktop"
+
   },
   "devDependencies": {
     "cypress": "^8.4.1",
