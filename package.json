@@ -5,11 +5,15 @@
   "scripts": {
     "start": "./node_modules/.bin/json-server --static . data.json -m middleware.js --config json-server.json",
     "cypress:open": "cypress open --config userAgent=desktop",
+    "cypress:runmobileopenBrowser": "cypress run --headed --spec 'cypress/integration/final/test.js' --config userAgent=mobile",
+    "cypress:rundesktopFinal": "cypress run --spec cypress/integration/final/test.js --config userAgent=desktop",
     "cypress:openmobile": "cypress open --config userAgent=mobile",
     "cypress:runhooks": "cypress run --headed --env searchBar='#twotabsearchtextbox[type='text']' --spec 'cypress/integration/hooks/hooks.js' --config userAgent=desktop"
   },
   "devDependencies": {
     "cypress": "^8.6.0",
+    "cypress-wait-until": "^1.7.1",
+    "cypress-xpath": "^1.6.2",
     "json-server": "0.15.1",
     "sendmail": "^1.6.1"
   },

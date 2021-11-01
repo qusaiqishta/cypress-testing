@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://mdn.github.io/learning-area/javascript/oojs/json",
+  "baseUrl": "https://www.frontendmentor.io",
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 4000,
   "$schema": "https://on.cypress.io/cypress.schema.json",

@@ -24,13 +24,39 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('typeLogin',(username,password)=>{
+Cypress.Commands.add('typeLogin', (username, password) => {
     cy.get('[data-test="username"]').type(username)
     cy.get('[data-test="password"]').type(password)
     cy.get('#login-button').click()
 })
 
-Cypress.Commands.add('logout',()=>{
+Cypress.Commands.add('logout', () => {
     cy.get('#react-burger-menu-btn').click()
     cy.get('#logout_sidebar_link').click()
 })
+
+Cypress.Commands.add('addItemToCart', () => {
+    cy.get(source.bags).first().click();
+    cy.get(source.addToCart).click({ force: true });
+    cy.get(source.cartItem).click();
+})
+
+
+// _________________________________________________________________
+
+import { source } from '../src/frontEndMEntor';
+let elements=[];
+export {elements};
+Cypress.Commands.add('getChallenges', () => {
+    cy.contains('Challenges').click({force:true});
+    cy.xpath(source.challenges).first().click();
+})
+
+Cypress.Commands.add('getDesigns', () => {
+    cy.contains('Challenges').click({force:true});
+    cy.xpath(source.challenges).first().click();
+    cy.xpath(source.designs).then(design => {
+        elements.push(design)
+    })
+})
+
